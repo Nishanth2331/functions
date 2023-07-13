@@ -1,0 +1,148 @@
+1.
+// print odd numbers
+(function check(){
+    let numbers=[1,2,3,4,5,6,7,8]
+    let odds = numbers.filter((num) => num % 2 === 1);
+    console.log(odds) 
+})();
+
+//Strings to title caps
+(function convert(){
+    let strings=["hello","world","is","first step"]
+       for(let i=0;i<strings.length; i++){
+        let a=strings[i].split("")
+        console.log(`${a[0].toUpperCase()}${a.slice(1).join("")}`)
+    }
+})();
+
+//Sum of all numbers in array
+(function addition(){
+    let number=[1,3,4,6,7,9]
+    let sum=0
+    for(i of number){
+        sum+=i
+    }
+    console.log(sum)
+})();
+
+//Return prime number in array
+(function prime(){
+    let numbers=[3,5,45,27,9,23]
+function Prime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(numbers.filter(Prime)); 
+})();
+
+
+//Return palindrome in array
+(function palindrome(){
+    let numbers=["121","12321","1234","5432","321"]
+    for(let i=0;i < numbers.length;i++){
+       let j = numbers[i].split("").reverse().join("")
+      if(numbers[i] === j){
+          console.log(numbers[i])
+      }
+    }
+    
+})();
+
+//Median of two sorted array of same size
+(function median(){
+   let a=["1","3","4","5"]
+   let b=["2","6","7","9"]
+   let c=a.concat(b).sort()
+   let d=c.slice(3,5)
+   console.log((Number(d[0])+Number(d[1]))/2)
+    
+})();
+
+//Remove duplicates from array
+(function duplicates(){
+let arr = ['guvi', 'hello', 'world', 'test', 'guvi','test','hello'];
+
+let final = arr.filter((c, index) => {
+    return arr.indexOf(c) === index;
+});
+
+console.log(final);
+})();
+
+//rotate an array
+(function rotate(){
+let rotate = (arr, count = 1) => {
+  return [...arr.slice(count, arr.length), ...arr.slice(0, count)];
+};
+
+let arr = [10,25,13,43,55];
+let k=4;
+console.log(rotate(arr, k));
+})();
+
+3.
+//odd numbers in an array
+let odd=() => {
+   let numbers=[1,2,3,4,5,6,7,8]
+    let odds = numbers.filter((num) => num % 2 === 1);
+    console.log(odds)
+}
+odd();
+
+//Convert all the strings to title caps in a string array
+let str=() => {
+     let strings=["hello","world","is","first step"]
+       for(let i=0;i<strings.length; i++){
+        let a=strings[i].split("")
+        console.log(`${a[0].toUpperCase()}${a.slice(1).join("")}`)
+    }
+}
+str();
+
+//Sum of all numbers in an array
+let sum=() => {
+      let number=[1,3,4,6,7,9]
+    let sum=0
+    for(i of number){
+        sum+=i
+        }
+        console.log(sum)
+}
+sum();
+
+//Return all the prime numbers in an array
+let prime=() => {
+let numbers=[3,5,45,27,9,23]
+function Prime(num) {
+  for (let i = 2; num > i; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(numbers.filter(Prime)); 
+}
+prime();
+
+
+
+//Return all the palindromes in an array
+let palindrome=() => {
+ let numbers=["121","12321","1234","5432","321"]
+    for(let i=0;i < numbers.length;i++){
+       let j = numbers[i].split("").reverse().join("")
+      if(numbers[i] === j){
+          console.log(numbers[i])
+      }
+    }
+
+}
+palindrome();
+
